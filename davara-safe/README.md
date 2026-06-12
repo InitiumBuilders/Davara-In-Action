@@ -62,8 +62,8 @@ credited in the [changelog](CHANGELOG.md). V2's first public correction
 | `research/SOURCES.md` | The claim register — every claim, source, confidence |
 | `attestation/` | Intuition attestation kit: mint Atoms + the first Triple (operator signs) |
 | `CHANGELOG.md` | The public iteration record |
-| `assets/css/main.css` | Design system (cold cyan = machine, warm amber = presence) |
-| `assets/js/boot.js` + `main.js` | Beacon canvas, reveals, count-ups, scroll rail (CSP-clean) |
+| `assets/css/main.<hash>.css` | Design system (cold cyan = machine, warm amber = presence) |
+| `assets/js/boot.<hash>.js` + `main.<hash>.js` | Beacon canvas, reveals, count-ups, scroll rail (CSP-clean) |
 | `vercel.json` | Security headers + caching |
 | `.well-known/security.txt` | Disclosure channel |
 

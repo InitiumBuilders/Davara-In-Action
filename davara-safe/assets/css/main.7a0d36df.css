@@ -130,6 +130,7 @@ section { padding: clamp(5.5rem, 13vw, 9.5rem) 0; position: relative; }
 /* ---------- hero ---------- */
 
 .hero {
+  min-height: 100vh;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -534,6 +535,10 @@ footer p { font-size: 0.92rem; color: var(--text-dim); }
 .gap-bar { display: flex; align-items: center; gap: 0.7rem; height: 1.1rem; }
 .gap-bar b { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text); font-weight: 500; flex: none; }
 .gap-fill { display: block; height: 8px; border-radius: 4px; flex: 0 1 auto; width: 0; transition: width 1.2s cubic-bezier(0.22,1,0.36,1) 0.2s; }
+/* bar widths live here, not in style="" — the CSP forbids inline styles and we keep it that way */
+.gap-w94 { --w: 94%; }
+.gap-w64 { --w: 64%; }
+.gap-w37 { --w: 37%; }
 .lit .gap-fill { width: var(--w); }
 html:not(.js) .gap-fill { width: var(--w); }
 .gap-fill--cold { background: linear-gradient(90deg, var(--cold-dim), var(--cold)); }
