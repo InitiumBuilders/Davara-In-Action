@@ -34,9 +34,6 @@ export default function Footer() {
             <Link href="/dao" className="ulink font-mono text-[0.58rem] tracking-[0.12em] uppercase inline-block">
               Read the agreement →
             </Link>
-            <Link href="/team" className="ulink font-mono text-[0.58rem] tracking-[0.12em] uppercase inline-block">
-              Meet the team →
-            </Link>
           </div>
         </div>
 

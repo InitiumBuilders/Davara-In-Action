@@ -14,7 +14,6 @@ const groups = [
       { href: "/research", label: "Research" },
       { href: "/frontier", label: "Frontier" },
       { href: "/systems", label: "Systems" },
-      { href: "/team", label: "Team" },
     ],
   },
   {

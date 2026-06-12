@@ -100,9 +100,6 @@ export default function HomePage() {
               <Link href="/status" className="font-mono text-[0.6rem] tracking-[0.14em] uppercase text-teal2/70 hover:text-teal2 transition-colors">
                 View build status →
               </Link>
-              <Link href="/team" className="font-mono text-[0.6rem] tracking-[0.14em] uppercase text-gold2/70 hover:text-gold2 transition-colors">
-                Meet the Emergent →
-              </Link>
             </div>
           </motion.div>
         </div>
