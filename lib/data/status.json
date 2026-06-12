@@ -1,0 +1,57 @@
+{
+  "fundedDash": 1100,
+  "spentDash": 0,
+  "currentMonth": 1,
+  "lastUpdated": "2026-04-27",
+  "nextMilestone": "2026-05-31",
+  "milestones": [
+    {
+      "id": "m1",
+      "title": "Foundation — Open-source reference signer",
+      "plannedMonth": 1,
+      "status": "in-progress",
+      "evidence": null,
+      "description": "Open-source the Davara reference signer under Apache 2.0. Publish hash on-chain. Core signer coordination, action contracts, and quorum logic."
+    },
+    {
+      "id": "m2",
+      "title": "Identity — davara.dash DPNS + masternode auth",
+      "plannedMonth": 2,
+      "status": "pending",
+      "evidence": null,
+      "description": "davara.dash DPNS identity live. Masternode-collateral signed-message auth → Davara session. CrowdNode-compatible verification path."
+    },
+    {
+      "id": "m3",
+      "title": "Council — Bylaws + first 9 seats elected",
+      "plannedMonth": 3,
+      "status": "pending",
+      "evidence": null,
+      "description": "Council bylaws ratified. First 9 seats elected via DAO vote. Conduct covenant signed by all Council members."
+    },
+    {
+      "id": "m4",
+      "title": "Compliance — EU AI Act + NIST + ISO mapping",
+      "plannedMonth": 4,
+      "status": "pending",
+      "evidence": null,
+      "description": "Davara Constitution mapping for EU AI Act Art. 55, NIST AI RMF 2.0, ISO/IEC 42001. Published as PDF + on-chain hash."
+    },
+    {
+      "id": "m5",
+      "title": "Quorum Demo — Public 5-of-9 live action",
+      "plannedMonth": 5,
+      "status": "pending",
+      "evidence": null,
+      "description": "Public 5-of-9 quorum (3 model vendors × 3 human reviewers + 3 Council seats) approving a real test action. Recorded, audited, published."
+    },
+    {
+      "id": "m6",
+      "title": "Handover — Constitution v1.0 ratified by DAO",
+      "plannedMonth": 6,
+      "status": "pending",
+      "evidence": null,
+      "description": "Davara Constitution v1.0 ratified by DAO vote. Council assumes ongoing review duty. Final report + audit closes proposal."
+    }
+  ]
+}
