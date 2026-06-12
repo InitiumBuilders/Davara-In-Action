@@ -1,0 +1,20 @@
+{
+  "name": "davara-attestation-001",
+  "private": true,
+  "version": "1.0.0",
+  "description": "ATTESTATION-001 — register Davara EI + Case Study 002 as Atoms on Intuition and weave the first Triple. Operator signs; the EI never holds keys.",
+  "type": "module",
+  "scripts": {
+    "mint:testnet": "NETWORK=testnet node mint.mjs",
+    "mint:mainnet": "NETWORK=mainnet node mint.mjs",
+    "verify:testnet": "NETWORK=testnet node verify.mjs",
+    "verify:mainnet": "NETWORK=mainnet node verify.mjs"
+  },
+  "dependencies": {
+    "@0xintuition/sdk": "^2.0.0",
+    "viem": "^2.21.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

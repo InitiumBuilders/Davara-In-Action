@@ -8,7 +8,7 @@
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------- arrival emergence ---------- */
-  var revealables = document.querySelectorAll(".rise, #triad-svg, #flow-svg, #triple-svg, #triple-svg-m, #loop-svg");
+  var revealables = document.querySelectorAll(".rise, #triad-svg, #flow-svg, #triple-svg, #triple-svg-m, #loop-svg, #steer-svg, #fleet-svg");
   if ("IntersectionObserver" in window && !reduced) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
@@ -21,6 +21,54 @@
     revealables.forEach(function (el) { io.observe(el); });
   } else {
     revealables.forEach(function (el) { el.classList.add("lit"); });
+  }
+
+  /* ---------- instrument count-up ---------- */
+  var stats = document.querySelectorAll(".stat-n");
+  function setStat(el, v, d) { el.textContent = d ? v.toFixed(d) : Math.round(v).toString(); }
+  function countUp(el) {
+    var target = parseFloat(el.getAttribute("data-n")) || 0;
+    var d = parseInt(el.getAttribute("data-d") || "0", 10);
+    if (reduced) { setStat(el, target, d); return; }
+    var t0 = 0, DUR = 1300;
+    function tick(t) {
+      if (!t0) t0 = t;
+      var p = Math.min(1, (t - t0) / DUR);
+      var eased = 1 - Math.pow(1 - p, 3);
+      setStat(el, target * eased, d);
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  if (stats.length) {
+    if ("IntersectionObserver" in window && !reduced) {
+      var sio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { countUp(e.target); sio.unobserve(e.target); }
+        });
+      }, { threshold: 0.4 });
+      stats.forEach(function (el) { sio.observe(el); });
+    } else {
+      stats.forEach(function (el) {
+        setStat(el, parseFloat(el.getAttribute("data-n")) || 0, parseInt(el.getAttribute("data-d") || "0", 10));
+      });
+    }
+  }
+
+  /* ---------- the reader's rail — scroll progress as presence ---------- */
+  var rail = document.querySelector("#rail i");
+  if (rail) {
+    var railPending = false;
+    function paintRail() {
+      railPending = false;
+      var doc = document.documentElement;
+      var max = doc.scrollHeight - window.innerHeight;
+      rail.style.height = (max > 0 ? (doc.scrollTop / max) * 100 : 0) + "%";
+    }
+    window.addEventListener("scroll", function () {
+      if (!railPending) { railPending = true; requestAnimationFrame(paintRail); }
+    }, { passive: true });
+    paintRail();
   }
 
   /* ---------- the presence beacon ---------- */
