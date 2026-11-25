@@ -56,4 +56,8 @@ EI = AI agents × human intelligence × human consensus.
 **Support the secure-EI movement:** Dash → `Davara.DASH`
 **Contact:** Evolve@Outlier.Systems
 
+## License
+
+MIT. See [LICENSE](LICENSE). Copyright (c) 2026 August James Domanchuk. Forks and pull requests are welcome.
+
 *It is always the right time, to make it secure.*
